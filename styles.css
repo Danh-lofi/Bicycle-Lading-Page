@@ -1,0 +1,90 @@
+@font-face {
+    font-family: MyriadProCondensed;
+    src: url(./fonts/MyriadProCondensed/MyriadProCondensed.ttf);
+}
+
+@font-face {
+    font-family: BerlinSansFBDemiBold;
+    src: url(./fonts/BerlinSansFBDemiBold/BerlinSansFBDemiBold.ttf);
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+
+:root {
+    --main-color: #1d1d1d;
+    --second-color: #3a3a3a;
+    --txt-color: #bbbbbb;
+    --txt-white: #ffffff;
+    --bg-black: #000;
+
+    --header-height: 144px;
+    --header-padding: 93px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--txt-color);
+    font-family: MyriadProCondensed, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 var(--header-padding);
+    height: var(--header-height);
+    width: 100%;
+    align-items: center;
+}
+
+.header__logo__title{
+    font-size: 5rem;
+    letter-spacing:.3rem;
+    color: var(--txt-white);
+}
+.header__navigation{
+    margin: 0 auto;
+    width: 50%;
+}
+.list__nav{
+    width: 100%;
+    font-size: 2.5rem;
+    justify-content: space-between;
+}
+.item__nav__link,.item__icon{
+    transition: color 0.3s ease-in-out;
+}
+.item__nav__link.active,.item__nav:hover .item__nav__link,
+.item__icon:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
+.list__icon{
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
