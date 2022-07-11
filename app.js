@@ -41,6 +41,13 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// auto change
+setInterval(() => {
+  changePage("next");
+  resetPage();
+  listPage[currentPage].classList.add("active");
+  listSlide[currentPage].classList.add("active");
+}, 5000);
 // Change slide
 preSlide.addEventListener("click", () => {
   changePage("prev");
