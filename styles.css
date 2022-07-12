@@ -15,6 +15,11 @@ button,input{
     border:none;
     outline: none;
 }
+html ::-webkit-scrollbar {
+    display: none;
+    border-radius: 0;
+    width: 8px;
+}
 :root {
     --main-color: #1d1d1d;
     --second-color: #3a3a3a;
