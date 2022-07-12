@@ -3,6 +3,9 @@ const listSlide = document.getElementsByClassName("slide");
 const listPage = document.getElementsByClassName("slide-page");
 const preSlide = document.getElementById("preSlide");
 const nextSlide = document.getElementById("nextSlide");
+let menuBar = document.querySelector(".header__menu");
+let menuSub = document.querySelector(".menu-sub");
+let close = document.querySelector(".close");
 let currentPage = 0;
 
 const resetPage = () => {
@@ -100,3 +103,11 @@ const loop = () => {
 };
 
 loop();
+
+menuBar.addEventListener("click", () => {
+  menuSub.classList.remove("show");
+});
+
+close.addEventListener("click", () => {
+  menuSub.classList.add("show");
+});

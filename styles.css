@@ -25,6 +25,8 @@ button,input{
     --header-height: 144px;
     --header-shrink-height: 60px;
     --header-padding: 93px;
+    --header-tablet-padding: 46px;
+    --header-mobile-padding: 20px;
 }
 * {
     padding: 0;
@@ -104,6 +106,7 @@ ul {
 .list__icon{
     justify-content: space-between;
     font-size: 1.6rem;
+    flex-wrap: nowrap;
 }
 
 .hero{
@@ -563,4 +566,173 @@ footer{
 .to-top.show {
     transform: translateY(0);
     opacity: 1;
+}
+
+
+
+@media (max-width: 740px) {
+    .header{
+        padding: 0 var(--header-tablet-padding);
+    }
+    .header__logo__title{
+        text-align: center;
+    }
+    .header__menu{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .item__icon{
+        margin-left: 10px;
+    }
+    .menu-sub.show{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    .menu-sub{
+        display: block;
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height:100vh;
+        background-color: #fff;
+        z-index: 100;
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform .6s ease 0s,opacity .6s ease 0s;
+    }
+
+    .close{
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        font-size: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .list__sub__nav{
+        padding: 80px 0;
+    }
+    .item__nav__sub__link{
+        padding: 20px var(--header-tablet-padding);
+        font-size: 3rem;
+        font-family: BerlinSansFBDemiBold;
+        font-weight: 600;
+    }
+    .slide-container{
+        padding-left: 50px;
+    }
+    .slide-container h3{
+        font-size: 7rem;
+    }
+    .slide__desc__text {
+        font-size: 1rem;
+    }
+    .hero-txt {
+        position: absolute;
+        font-size: 8rem;
+        text-transform: uppercase;
+        font-family: BerlinSansFBDemiBold;
+        color: var(--second-color);
+        transform: rotate(-90deg);
+        top: 43%;
+        right: -28%;
+    }
+    .section__title__second {
+        font-size: 3rem;
+        color: var(--second-color);
+        position: absolute;
+        z-index: -1;
+        left: 14%;
+        top: -80%;
+    }
+    .section__title__main {
+        font-size: 2.5rem;
+        color: #bbb;
+        z-index: 1;
+    }
+    slide__img {
+        width: 58%;
+        padding-right: 5px;
+        padding-top: 110px;
+        z-index: 1;
+    }
+    .slide__img {
+        width: 60%;
+        padding-right: 5px;
+        padding-top: 110px;
+        z-index: 1;
+    }
+    .section__container {
+        height: 380px;
+    }
+
+    .section__category__title {
+        bottom: 10%;
+        font-size: 2.5rem;
+    }
+    .section__view {
+        right: 3%;
+        bottom: 14px;
+        font-size: 0.8rem;
+    }
+    .section__title {
+        margin-bottom: 100px;
+    }
+    .section__content {
+        padding: 0 52px;
+    }
+
+    .cart__container {
+        padding: 20px;
+    }
+
+    .cart__name {
+       font-size: 2rem;
+    }
+    .cart__price {
+        font-size:  1.2rem;
+    }
+    .cart__button {
+        font-size: 0.8rem;
+    }
+    .cart__name.small {
+        font-size: 1rem;
+    }
+
+    .section__special__title {
+        font-size: 2.5rem;
+    }
+    .section__special__main {
+        font-size: 6rem;
+    }
+    .section__special__img {
+        position: absolute;
+        width: 58%;
+        left: 8%;
+        bottom: -35%;
+    }
+
+    .section__new__title {
+        padding: 10px 0;
+        color: #fff;
+        font-size: 1.3rem;
+    }
+    .footer__container {
+        padding: 5rem 5rem 2rem 5rem;
+    }
+    .section__new {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header{
+        padding: 0 var(--header-mobile-padding);
+    }
+    .slide-container {
+        padding-left: 20px;
+    }
 }
