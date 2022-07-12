@@ -8,7 +8,13 @@
     src: url(./fonts/BerlinSansFBDemiBold/BerlinSansFBDemiBold.ttf);
 }
 
-
+img{
+    width: 100%;
+}
+button,input{
+    border:none;
+    outline: none;
+}
 :root {
     --main-color: #1d1d1d;
     --second-color: #3a3a3a;
@@ -73,6 +79,7 @@ ul {
 
 .header__logo__title{
     font-size: 3rem;
+    font-family: BerlinSansFBDemiBold;
     letter-spacing:.3rem;
     color: var(--txt-white);
 }
@@ -298,6 +305,9 @@ ul {
     text-align: center;
     transition: background-color .5s ease;
 }
+.cart__container.normal{
+    padding: 20px;
+}
 .cart__container:hover{
     cursor: pointer;
     background-color: #000;
@@ -354,4 +364,203 @@ ul {
     justify-content:center;
     align-items:center;
 
+}
+
+.section__special{
+    background-color: #000;
+    margin-bottom:350px;
+}
+.section__special__container{
+    position: relative;
+    padding: 64px 122px;
+    text-align: right;
+}
+
+.section__special__title{
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: BerlinSansFBDemiBold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.section__special__main{
+    font-size: 9rem;
+    font-weight: 600;
+    font-family: BerlinSansFBDemiBold;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
+    -webkit-text-stroke-width: 4px;
+    padding: 10px 0;
+}
+
+.section__special__price{
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: BerlinSansFBDemiBold;
+    color: #fff;
+    padding: 10px 0;
+}
+.section__special__button{
+    padding: 15px 0;
+}
+.section__special__button button{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: BerlinSansFBDemiBold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--second-color);
+    padding: 12px 16px;
+    transition: all .3s ease-in-out;
+}
+.section__special__button button:hover{
+    cursor: pointer;
+    background-color:#fff;
+    color: #000;
+}
+
+.section__special__img{
+    position: absolute;
+    width: 50%;
+    bottom: -40%;
+}
+
+.section__new{
+    padding: 20px;
+}
+.section__new:hover{
+    cursor: pointer;
+}
+.section__new:hover .section__new__img{
+    transform: scale(1.2);
+}
+.section__new__img{
+    width: 100%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    transition: transform 0.5s ease 0s;
+}
+.section__new__wrap{
+    overflow: hidden;
+}
+
+.section__new__title{
+    padding: 10px 0;
+    color: #fff;
+    font-size: 2rem;
+}
+.section__new__text{
+    padding: 10px 0;
+}
+
+.section__new__button{
+    padding: 10px 0;
+}
+.section__new__button button{
+    color: #fff;
+    background-color: var(--second-color);
+    padding: 12px 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all .5s ease;
+}
+.section__new__button button:hover{
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+}
+
+footer{
+    background-color: var(--second-color);
+}
+.footer__container{
+    padding: 7rem 7rem 4rem 7rem;
+}
+.footer__logo{
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: BerlinSansFBDemiBold;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.footer__desc{
+    padding: 10px 0;
+}
+.list__socials{
+    padding: 10px 0;
+    display: flex;
+}
+.item__social{
+    margin-right: 20px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease 0s;
+}
+.item__social:hover,.footer__menu__item:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer__menu__item{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: color 0.3s ease 0s;
+}
+
+.footer__text{
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer__input input{
+    margin-top: 20px;
+    padding: 12px 18px;
+}
+
+.footer__button button{
+    padding: 12px 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all .5s ease 0s; 
+}
+.footer__button button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+.to-right,
+.to-left,
+.to-top{
+    opacity: 0;
+    transition: transform 1.5s ease 0s,opacity 1s ease 0s;
+}
+.to-right{
+    transform: translateX(200px);
+}
+.to-left {
+    transform: translateX(-200px);
+}
+.to-top {
+    transform: translateY(100px);
+}
+.to-right.show,.to-left.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+.to-top.show {
+    transform: translateY(0);
+    opacity: 1;
 }

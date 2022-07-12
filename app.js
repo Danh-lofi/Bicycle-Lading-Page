@@ -70,3 +70,33 @@ for (let i = 0; i < listSlide.length; i++) {
     listSlide[currentPage].classList.add("active");
   });
 }
+
+let el_to_show = document.querySelectorAll(".show-on-scroll");
+
+let scroll =
+  window.requestAnimationFrame ||
+  function (callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+
+const isElInViewPort = (el) => {
+  let rect = el.getBoundingClientRect();
+
+  let distance = 200;
+  console.log(rect);
+  return (
+    rect.top <=
+    (window.innerHeight - distance ||
+      document.documentElement.clientHeight - distance)
+  );
+};
+
+const loop = () => {
+  el_to_show.forEach((el) => {
+    if (isElInViewPort(el)) el.classList.add("show");
+  });
+
+  scroll(loop);
+};
+
+loop();
